@@ -1,0 +1,340 @@
+---
+import Main from '../../layouts/Layout.astro';
+import Project from "../../components/PaperSummary.astro";
+---
+<Main title="Research">
+        <h1 class="md:text-6xl text-5xl text-center font-black mb-6">RESEARCH</h1>
+      <div class="content">
+            <p class="mb-6 text-lg text-center">
+                I have worked on numerous research projects througout my
+                academic career that cover a broad variety of subjects. 
+                Below I have broadly classified these projects into their
+                own research topics. For each of these projects I provide 
+                a brief description for each of the main
+                projects, which links to the main journal publication. The
+                four major research areas are:
+            </p>
+      </div>
+      <div class:"mx-8">
+      <ul class="pl-5 text-center">
+            <li><a href="#21-cm">1. Exploring the EoR using the 21-cm line of neutral hydrogen</a></li>
+            <li><a href="#QSO">2. Using high redshift QSOs to measure the neutral hydrogen content during the EoR</a></li>
+            <li><a href="#forest">3. Estimate dark energy using the Ly&alpha; forest</a></li>
+            <li><a href="#gal-cos">4. Measuring dark energy using the clustering of LAEs</a></li>
+      </ul>
+      </div>
+
+      <section id="21-cm">
+      <h3 class="text-3xl font-black text-center mt-12 mb-6 w-full">
+        Studying the EoR by mapping the neutral hydrogen between galaxies
+      </h3>
+      <div>
+      <p>           
+          Observing the galaxies responsible for causing the Epoch of Reionisation
+          (EoR) is extremely difficult due to how faint these galaxies are and how expensive
+          it is to observe them. Alternatively, we can infer how these galaxies caused
+          reionisation by observing how quickly the neutral hydrogen in the almost empty
+          space between galaxies disappears due to the ionising radiation they emit. This
+          can be observed by detecting the 21-cm hyperfine line of neutral hydrogen, which
+          is redshifted to be observed at radio frequencies. For this, I wrote <a
+                href="https://github.com/21cmfast/21CMMC" 
+                class="hover:underline font-bold">21CMMC</a> 
+          which uses Bayesian inference to interpret real or synthetic observations to reveal
+          insights into the physical properties of the galaxies responsible for reionisation.
+          21CMMC performs 3D realisations of the 21-cm signal using the <a
+                href="https://github.com/21cmfast/21cmFAST"
+                class="hover:underline font-bold">21cmFAST</a>
+          simulation software on-the-fly within a Monte-Carlo Markov-Chain (MCMC).
+          <br>          </br>
+          Exploring all things 21-cm related was the dominant focus of my research career,
+          thus these projects can be broken down into the following smaller sub-categories:
+          <br>          </br>
+       </p>
+       </section>
+
+       </div>
+       <div class:"mx-10">
+          <ul class="text-center">
+                <li><a href="#alt-sum">1. Exploring alternative statistics other than the power spectrum</a></li>
+                <li><a href="#interp-obs">2. Interpreting real-world observations of the 21-cm signal</a></li>
+                <li><a href="#21CMMC">3. Building the 21CMMC framework</a></li>
+                <li><a href="#SKA">4. Forecasting the performance of the Square Kilometre Array</a></li>
+                <li><a href="#21cm-interp">5. Gaining insights about the EoR through the 21-cm signal </a></li>
+            </ul>
+       </div>
+
+     <section id="alt-sum">
+     <div class="flex mx-8 text-center">
+         <h3 class="text-xl font-black text-center mt-4 mb-4 w-full">
+            Exploring alternative statistical methods for measuring the 21-cm signal
+         </h3>
+     </div>
+      <div class="flex mx-8 text-center">
+        <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
+          <Project
+            title="Inferring astrophysical parameters using the 2D cylindrical power spectrum from reionisation"
+            summary="Using simulation-based inference to demonstrate the improvements in constraints on our astrophysical model parameters that are achievable \
+                    due to the additional spatial information present when we compress the 3D signal down to a 2D summary statistic (cylindrical power spectrum) \
+                    compared to a simple 1D PS."
+            link="https://ui.adsabs.harvard.edu/abs/2024arXiv240314060G/abstract"
+          />
+          <Project
+            title="Exploring the cosmic 21-cm signal from the epoch of reionization using the wavelet scattering transform"
+            summary="Introducing a new summary statistic analogous to performing a convolutional neural network to extract non-Gaussian information \
+                    about the neutral hydrogen. Apply a series of wavelet filters of varying length scales and compress the information into a \
+                    series of scattering coefficients. This is applied directly to 2D images."
+            link="https://ui.adsabs.harvard.edu/abs/2022MNRAS.513.1719G/abstract"
+          />
+          <Project
+            title="Detecting the non-Gaussianity of the 21-cm signal during reionization with the wavelet scattering transform"
+            summary="A neat idea by my colleague to detect the presence of the non-Gaussian aspects of the 21-cm signal from neutral hydrogen \
+                     by taking the ratio of the scattering coeffients extracted from the true 2D image compared to those from a 2D image with \
+                     the phase information removed. Amplitudes above zero imply non-Gaussian signal in the original image."
+            link="https://ui.adsabs.harvard.edu/abs/2023MNRAS.519.5288G/abstract"
+          />
+        </div>
+      </div>
+     </section>     
+
+     <section id="interp-obs">
+     <div class="flex mx-8 text-center">
+         <h3 class="text-xl font-black text-center mt-4 mb-4 w-full">
+             Interpreting observational data
+         </h3>
+     </div>
+      <div class="flex mx-8 text-center">
+        <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
+          <Project
+            title="Interpreting LOFAR 21-cm signal upper limits at z &asymp; 9.1 in the context of high-z galaxy and reionization observations "
+            summary="Using the best upper-limits on the 21-cm signal from the LOFAR radio interferometer to interpret what this signal can \
+                     tell us about the physics of reionisation. Achieved by performing Bayesian inference to search for models in excess (disfavoured) \
+                     by the upper-limits."
+            link="https://ui.adsabs.harvard.edu/abs/2021MNRAS.501....1G/abstract"
+          />
+          <Project
+            title="Exploring reionization and high-z galaxy observables with recent multiredshift MWA upper limits on the 21-cm signal "
+            summary="Using the best upper-limits on the 21-cm signal, but instead from the MWA radio interferometer. Perform the same analysis \
+                     searching for disfavoured models but at a different period during the EoR."
+            link="https://ui.adsabs.harvard.edu/abs/2021MNRAS.500.5322G/abstract"
+          />
+          <Project
+            title="The global history of reionization"
+            summary="We do not have actual observations of the 21-cm signal from neutral hydrogen, only upper limits. This project explored \
+                     what other probes of the neutral hydrogen during the EoR can tell us about the astrophysical properties of the galaxies \
+                     driving reionisation."
+            link="https://ui.adsabs.harvard.edu/abs/2017MNRAS.465.4838G/abstract"
+          />
+          <Project
+            title="Constraints on the temperature of the intergalactic medium at z = 8.4 with 21-cm observations"
+            summary="Using upper-limits on the 21-cm signal from the PAPER-64 radio interferometer to recover a minimum temperature for the \
+                     neutral hydrogen during the EoR. Inferred a temperature in excess of 3 K, implying some level of heating of the neutral \
+                     hydrogen due to ongoing reionisation."
+            link="https://ui.adsabs.harvard.edu/abs/2016MNRAS.455.4295G/abstract"
+          />
+        </div>
+      </div>
+     </section>
+     <section id="21CMMC">
+     <div class="flex mx-8 text-center">
+         <h3 class="text-xl font-black text-center mt-4 mb-4 w-full">
+             Developing the 21CMMC framework
+         </h3>
+     </div>
+      <div class="flex mx-8 text-center">
+        <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
+          <Project
+            title="21CMMC with a 3D light-cone: the impact of the co-evolution approximation on the astrophysics of reionization and cosmic dawn"
+            summary="Further expanding the capabilities of 21CMMC to include 3D light-cones of the neutral hydrogen, enabling 21CMMC to \
+                     better match the characteristics of observational data."
+            link="https://ui.adsabs.harvard.edu/abs/2018MNRAS.477.3217G/abstract"
+          />
+          <Project
+            title="Simultaneously constraining the astrophysics of reionization and the epoch of heating with 21CMMC"
+            summary="Exanding 21CMMC to explore the full evolution of the 21-cm signal including the heating of the neutral hydrogen  \
+                     due to X-rays emitted by the first galaxies."
+            link="https://ui.adsabs.harvard.edu/abs/2017MNRAS.472.2651G/abstract"
+          />
+          <Project
+            title="21CMMC: an MCMC analysis tool enabling astrophysical parameter studies of the cosmic 21 cm signal"
+            summary="The introductory publication of 21CMMC, showcasing for the first time the ability to perform 3D simulations of reionisation \
+                     within a Bayesian inference pipeline."
+            link="https://ui.adsabs.harvard.edu/abs/2015MNRAS.449.4246G/abstract"
+          />
+        </div>
+      </div>
+     </section>
+     <section id="SKA">
+     <div class="flex mx-8 text-center">
+         <h3 class="text-xl font-black text-center mt-4 mb-4 w-full">
+             Forecasting for the Square Kilometre Array
+         </h3>
+     </div>
+      <div class="flex mx-8 text-center">
+        <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
+          <Project
+            title="Reionization and cosmic dawn astrophysics from the Square Kilometre Array: impact of observing strategies"
+            summary="The Square Kilometre Array is set to revolutionise what we can learn about reionisation. This explores optimal survey designs \
+                     to maximise the available information we can extract given a fixed amount of observing time."
+            link="https://ui.adsabs.harvard.edu/abs/2020MNRAS.491.1398G/abstract"
+          />
+          <Project
+            title="Optimal core baseline design and observing strategy for probing the astrophysics of reionization with the SKA"
+            summary="The first phase of the Square Kilometre Array underwent descoping of the original design due to budget limitations. This project \
+                     explored the consequences of these proposed changes to determine which minimised the impact of the actual intended science on the EoR."
+            link="https://ui.adsabs.harvard.edu/abs/2015arXiv150903312G/abstract"
+          />  
+        </div>
+      </div>
+     </section>
+     <section id="21cm-interp">
+     <div class="flex mx-8 text-center">
+         <h3 class="text-xl font-black text-center mt-4 mb-4 w-full">
+             Understanding the 21-cm signal from the neutral hydrogen
+         </h3>
+     </div>
+      <div class="flex mx-8 text-center">
+        <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
+          <Project
+            title="Exploring the role of the halo mass function for inferring astrophysical parameters during reionisation"
+            summary="Our inference pipelines make many simplifying assumptions which can bias what information we extract from an observation. Using \
+                     simulation-based inference I explored how assuming a fixed functional form for the number density of galaxies can lead to significant biases and that \
+                     these can be removed if we instead simultaneously fit a generalised functional form."
+            link="https://ui.adsabs.harvard.edu/abs/2024arXiv240314061G/abstract"
+          />
+          <Project
+            title="Generating extremely large-volume reionization simulations"                                                                                            
+             summary="To perform accurate end-to-end validation of radio interferometer data analysis pipelines, we require simulations \
+                     in excess of the instrument field-of-view. This can be extremely computationally challenging. Using a simplified version \
+                     of 21cmFAST I created a 8 Gpc wide simulation, more than 4 times larger than anything previously."
+            link="https://ui.adsabs.harvard.edu/abs/2022MNRAS.516.5588G/abstract"                                                              
+          />
+          <Project
+            title="Inference from the 21cm signal"   
+            summary="This is textbook chapter I wrote in 2019 summarising the current state-of-the-art in extracting astrophysical information about the \
+                    EoR from observations. It explored various summary statistics of the signal and what unique insights each provided along with discussions \
+                    on the various inference methodologies in use."
+            link="https://ui.adsabs.harvard.edu/abs/2019arXiv190913860G/abstract"
+          />
+        </div>
+      </div>
+      </section>
+
+      <section id="QSO">
+      <h3 class="text-3xl font-black text-center mt-12 mb-6 w-full">
+        Using how bright objects are partially obscured due to neutral hydrogen from the EoR
+      </h3>
+      <p>
+          The observed Lyman-alpha emission line of high-redshift quasars during the
+          EoR can be attenuated due to the neutral hydrogen present in the space 
+          between galaxies. By reconstructing the true, unattenuated profile one can
+          compare the level of attenuation against numerical simulations to estimate
+          the average neutral hydrogen that persists along the line-of-sight 
+      </p>
+      <div class="flex mx-8 text-center">
+        <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
+          <Project
+            title="Blind QSO reconstruction challenge: Exploring methods to reconstruct the Ly&alpha; emission line of QSOs"
+            summary="A comparison of the performance of ten different Ly&alpha; reconstruction pipelines for the same unified set of QSOs. The study was \
+                    performed blind to minimise confirmation bias. Provided both a qualitative and quantitative comparison."
+            link="https://ui.adsabs.harvard.edu/abs/2024arXiv240401556G/abstract"
+          />
+          <Project
+            title="IGM damping wing constraints on the tail end of reionization from the enlarged XQR-30 sample"
+            summary="The most comprehensive analysis of high redshift QSOs to interpret constraints on the EoR. Using a carefully selected sample of 23 QSOs observed \
+                    with X-Shooter as part of the XQR-30 campaign, constraints on the EoR were determined between 5.8 < z < 6.5." 
+            link="https://ui.adsabs.harvard.edu/abs/2024MNRAS.530.3208G/abstract"
+          />  
+          <Project
+            title="IGM damping wing constraints on reionization from covariance reconstruction of two z &GreaterEqual; 7 QSOs"
+            summary="Obtained constraints on the EoR using two new observed z > 7 QSOs. Applied the updated reconstruction pipeline to recover constraints on the \
+                     neutral fraction. Additionally, performed a comparison to existing constraints from a PCA based reconstruction pipeline."
+            link="https://ui.adsabs.harvard.edu/abs/2022MNRAS.512.5390G/abstract"
+          />
+          <Project
+            title="Constraints on reionization from the z = 7.5 QSO ULASJ1342+0928" 
+            summary="Extracting constraints on the EoR using the observed spectrum of the QSO with the record for the highest redshift at the time. Expanded \
+                    the reconstruction pipeline to simultaneously reconstruct the N V emission line. Applied the same analysis pipeline to recover constraints on the \
+                    neutral fraction."
+            link="https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.5094G/abstract"   
+          />
+          <Project
+            title="Are we witnessing the epoch of reionisation at z = 7.1 from the spectrum of J1120+0641?"
+            summary="The first measurement of on-going reionisation. Obtained by comparing the observed spectrum of the first ever z > 7 QSO to the predicted \
+                     Ly&alpha; emission line from my Bayesian reconstruction pipeline. These are then compared against EoR simulations to determine how much neutral hydrogen \
+                     is needed to explain the attenuation of the observed spectrum."
+            link="https://ui.adsabs.harvard.edu/abs/2017MNRAS.466.4239G/abstract"
+          />
+          <Project
+            title="Ly&alpha; emission-line reconstruction for high-z QSOs"
+            summary="The introductory publication demonstrating the covariance based Bayesian reconstruction of the Ly&alpha; emission line profile of QSOs. Highlights \
+                     the correlations between the Ly&alpha; line properties and other emission lines."
+            link="https://ui.adsabs.harvard.edu/abs/2017MNRAS.466.1814G/abstract"
+          />
+        </div>
+      </div>
+      </section>
+
+      <section id="forest">
+      <h3 class="text-3xl font-black text-center mt-12 mb-6 w-full">
+          Tracing gas between galaxies to measure how much dark matter and dark energy exists
+      </h3>
+      <p>
+         QSOs are amongst the brightest individual objects, acting as intense beacons shining their light over the vast distances between us and the QSO. The emitted
+         light gets redshifted as it travels through the expanding space with its wavelength getting longer (frequency getting shorter) the further it travels. If this light
+         redshifts into resonance with the absorption frequency of neutral hydrogen, it will be absorbed and rescattered away from us. Doing so leaves a characteristic absorption
+         trough in the observed spectrum indicating the presence of small clouds of neutral hydrogen between us and the QSO. This only happens long after the EoR, once most of the
+         neutral hydrogen has been ionised with these clouds sufficiently dense to have withstood the intense radiation during the EoR. The series of absorption troughs tracing these
+         clouds of neutral hydrogen are known as the Ly&alpha; forest.
+      <br>
+      </br>
+         If we observe a sufficiently large number of these QSO sightlines through the Universe, we can build a map of where all these clouds of neutral hydrogen are distributed. 
+         Doing so over sufficiently large volumes of the Universe, we can measure a characteristic length scale arising due to Baryon Acoustic Oscillations (BAOs). These are sound
+         waves in the primordial plasma left over after the Big Bang which caused matter to cluster together with a slightly higher probability than random. Measuring this scale
+         to sufficienctly high precision (which requires large volumes of space to be probed) allows us to "weigh" the amount of dark matter and dark energy as the Universe expands. 
+      </p>
+      <div class="flex mx-8 text-center">
+        <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
+          <Project
+            title="The impact of temperature fluctuations on the large-scale clustering of the Ly&alpha; forest"
+            summary="Helium, like hydrogen also undergoes reionisation, but this occurs much later, right when we want to use the Ly&alpha; forest for studying these BAOs. \
+                    I modified my Ly&alpha; forest simulations to explore the impact of the heat injected into the neutral hydrogen due to Helium reionisation."
+            link="https://ui.adsabs.harvard.edu/abs/2015MNRAS.447.2503G/abstract"
+          />
+          <Project
+            title="Fast, large-volume, GPU-enabled simulations for the Ly&alpha; forest: power spectrum forecasts for baryon acoustic oscillation experiments"
+            summary="This was my first research project. I wrote simulations to use the computational power of Graphics Processing Units (GPUs) to produce \
+                     large volumes of the Universe to statistically study the recovery of the BAOs from the Ly&alpha; forest."
+            link="https://ui.adsabs.harvard.edu/abs/2011MNRAS.418.1980G/abstract"   
+          />
+        </div>
+      </div>
+      </section>
+
+      <section id="gal-cos">
+      <h3 class="text-3xl font-black text-center mt-12 mb-6 w-full">
+          Observing large numbers of galaxies to figure out how much dark matter and dark energy there is
+      </h3>
+      <p>
+          Galaxies, like QSOs also emit Ly&alpha; radiation. However, they are much fainter making it difficult to measure an equivalent Ly&alpha; forest. However,
+          galaxies are also considerably more numerous. If we observe large numbers
+          of Ly&alpha; emitting galaxies (LAEs), and know their precise locations we can estimate how these cluster together on large scales. Doing so once
+          again allows us to measure the BAOs. However, because we are selecting these galaxies based on their Ly&alpha; emission, estimating the clustering 
+          strength of these galaxies becomes complicated due to additional radiative transfer effects. Thus more traditional statistical measurements such as 
+          two-point correlation functions (statistical distribution of pairs of galaxies separated by their distance) do not contain enough unique information 
+          to separate out the cosmological effects due to dark matter and dark energy
+          from the degenerate radiative transfer effects. Thus we need to consider more complicated, higher order statistical methods.
+      </p>
+      <div class="flex mx-8 text-center">
+        <div class="flex gap-8 mx-auto w-full flex-wrap justify-center">
+          <Project
+            title="Cosmology from clustering of Ly&alpha; galaxies: breaking non-gravitational Ly&alpha; radiative transfer degeneracies using the bispectrum"
+            summary="By measuring the clustering strength of LAEs as a function of closed triangles on the sky (three point correlation function or \
+                     bispectrum in Fourier space) we can break the degeneracies between cosmology and radiative transfer effects. This enables a more \
+                     precise means to estimate dark energy from LAEs." 
+            link="https://ui.adsabs.harvard.edu/abs/2013MNRAS.431.1777G/abstract"
+          />
+        </div>
+      </div>
+      </section>
+</Main>
+

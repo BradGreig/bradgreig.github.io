@@ -1,0 +1,13 @@
+---
+const { title, summary, link = "#" } = Astro.props;
+---
+
+<div class="max-w-sm mb-4 w-72 mx-0">
+  <div class="p-1">
+    <h2 class="mb-2 text-md font-semibold tracking-tight">
+      {title}
+    </h2>
+    <a href={link} class="bordered-link">{summary}
+    </a>
+  </div>
+</div>

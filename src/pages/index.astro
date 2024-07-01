@@ -1,0 +1,66 @@
+---
+import GithubLogo from "../components/logos/GithubLogo.astro";
+import OrcidLogo from "../components/logos/OrcID.astro";
+
+import "../styles/global.css";
+---
+
+<html lang="en">
+<head>
+    <title>Homepage of Brad Greig</title>
+    <style>
+      body {
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f2f2f2;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <main class="under-construction">
+      <div class="mt-16 flex justify-center space-x-8 md:space-x-16 text-m font-semibold leading-6 underline-offset-4">
+            {
+              <a href="/about" class="hover:underline">
+                About
+              </a>
+            }
+            {
+              <a href="/research" class="hover:underline">
+                Research                                   
+              </a>
+            } 
+      </div>
+
+      <div class="container">
+        <h1>Brad Greig</h1>
+        <p>Former astrophysicist</p>
+        <p>
+            Website currently under construction 
+            <br>
+            (it's functional but lacking aesthetics)
+        </p>
+        <div class="mt-6 flex justify-center space-x-4">
+            <GithubLogo size="1.3em" link="https://github.com/BradGreig" />
+            <OrcidLogo
+              size="1.3em"
+              link="https://orcid.org/0000-0002-4085-2094"
+            />
+            <!-- Link to NASA ADS -->
+            <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22Greig%2C%20Bradley%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" class="link-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-external-link-alt"></i> NASA ADS publication list
+            </a>
+        </div> 
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; {new Date().getFullYear()}</p>
+      </div>
+    </footer>
+  </body>
+</html>
