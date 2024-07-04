@@ -1,0 +1,62 @@
+---
+import Main from '../../layouts/Layout.astro';
+---
+
+<Main title="About">
+    <article class="m-20 md:px-20 flex flex-wrap items-center justify-center">
+        <h1 class="md:text-6xl text-5xl font-black mb-6">RESEARCH DATA PRODUCTS</h1>
+        <div class="content">
+            <p class="mb-6 text-lg">
+                A couple of my research projects warranted their own dedicated pages
+                owing to either the usefulness of the data or the sheer volume of 
+                figures which are not suitable for journal publications. Below you can 
+                find links to the various pages.
+            </p>
+      </div>
+      <section id="21-cm">
+          <h3 class="text-3xl font-black text-center mt-12 mb-6 w-full">
+              Blind QSO challenge
+          </h3>
+    
+          <div>
+              <p>
+                  A blind reconstruction of the Ly&alpha; emission line of QSOs for two distinct
+                  samples of 30 QSOs from X-Shooter and SDSS (BOSS). A qualitative and quantitative
+                  analysis of the reconstruction performance compared to the actual known emission 
+                  line for all known QSO reconstruction methodologies in the literature.
+                  <br> </br>
+                  Details about the two data-sets along with figures summarising the reconstruction
+                  for each of the 60 QSOs can be found on the <a 
+                      href="https://bradgreig.github.io/blind-QSO-challenge/" target="_blank" 
+                      class="hover:underline font-bold">blind QSO challenge page</a>.
+              </p>
+          </div>
+      </section>      
+
+      <section id="21-cm">
+          <h3 class="text-3xl font-black text-center mt-12 mb-6 w-full">
+              Large volume reionisation simulations
+          </h3> 
+          <div>   
+              <p> 
+                  Validation testing of end-to-end analysis pipelines require simulations of the cosmic
+                  signal larger than the field-of-view of the radio interferometer. This can be computationally
+                  intensive bordering on infeasible for those instruments that see a significant fraction of
+                  the sky at any one time.
+                  <br>   </br>
+                  Using a simplified version of <a
+                      href="https://github.com/21cmfast/21cmFAST" target="_blank"
+                      class="hover:underline font-bold">21cmFAST</a>
+                  I generated an 7.5 Gigaparsec on a side simulation spanning two distinct
+                  redshift ranges: (i) 6.2 &lt; z &lt; 7.6 (492 Megaparsec deep) and 
+                  (ii) 7.5 &lt; z &lt; 10.2 (700 Megaparsec deep). Information for 
+                  accessing this data, along with other supplementary data can be located 
+                  on the <a 
+                      href="https://bradgreig.github.io/large-volume-data/" target="_blank" 
+                      class="hover:underline font-bold">large volume data
+                  </a> page.
+              </p>
+          </div>
+      </section>
+      </article>
+</Main>
