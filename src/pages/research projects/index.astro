@@ -1,6 +1,32 @@
 ---
 import Main from '../../layouts/Layout.astro';
 import Project from "../../components/PaperSummary.astro";
+
+import { Image } from 'astro:assets';
+import XQRhist from "../../assets/XQR-hist.jpg";
+import LC21CMMC from "../../assets/21CMMC-LC.jpg";
+import Ts21CMMC from "../../assets/21CMMC-Ts.jpg";
+import e21CMMC from "../../assets/21CMMC.jpg";
+import PS2D from "../../assets/2DPS.jpg";
+import BAOs from "../../assets/BAOs.jpg";
+import GCs from "../../assets/GlobalConstraints.jpg";
+import HMF from "../../assets/HMF.jpg";
+import He from "../../assets/Helium-reion.jpg";
+import LAEs from "../../assets/LAEs.jpg";
+import LOFAR from "../../assets/LOFAR.jpg";
+import Vol from "../../assets/LargeVolume.jpg";
+import MWA from "../../assets/MWA.jpg";
+import PAPER from "../../assets/PAPER-64.jpg";
+import QSOcorr from "../../assets/QSO-corr.jpg";
+import SKAdes from "../../assets/SKA-design.jpg";
+import SKA from "../../assets/SKA.jpg";
+import TB from "../../assets/Textbook.jpg";
+import J1120 from "../../assets/ULASJ1120.jpg";
+import J1342 from "../../assets/ULASJ1342.jpg";
+import WSTphase from "../../assets/WST-phase.jpg";
+import WST from "../../assets/WST.jpg";
+import blindQSO from "../../assets/blindQSO.jpg";
+import z7QSOs from "../../assets/z7QSOs.jpg";
 ---
 <Main title="Research">
         <h1 class="md:text-6xl text-5xl text-center font-black mb-6">RESEARCH</h1>
@@ -22,6 +48,7 @@ import Project from "../../components/PaperSummary.astro";
             <li><a href="#forest">3. Estimate dark energy using the Ly&alpha; forest</a></li>
             <li><a href="#gal-cos">4. Measuring dark energy using the clustering of LAEs</a></li>
       </ul>
+
       </div>
 
       <section id="21-cm">
@@ -76,6 +103,7 @@ import Project from "../../components/PaperSummary.astro";
             summary="Using simulation-based inference to demonstrate the improvements in constraints on our astrophysical model parameters that are achievable \
                     due to the additional spatial information present when we compress the 3D signal down to a 2D summary statistic (cylindrical power spectrum) \
                     compared to a simple 1D PS."
+            image={PS2D}
             link="https://ui.adsabs.harvard.edu/abs/2024arXiv240314060G/abstract"
           />
           <Project
@@ -83,6 +111,7 @@ import Project from "../../components/PaperSummary.astro";
             summary="Introducing a new summary statistic analogous to performing a convolutional neural network to extract non-Gaussian information \
                     about the neutral hydrogen. Apply a series of wavelet filters of varying length scales and compress the information into a \
                     series of scattering coefficients. This is applied directly to 2D images."
+            image={WST}
             link="https://ui.adsabs.harvard.edu/abs/2022MNRAS.513.1719G/abstract"
           />
           <Project
@@ -90,6 +119,7 @@ import Project from "../../components/PaperSummary.astro";
             summary="A neat idea by my colleague to detect the presence of the non-Gaussian aspects of the 21-cm signal from neutral hydrogen \
                      by taking the ratio of the scattering coeffients extracted from the true 2D image compared to those from a 2D image with \
                      the phase information removed. Amplitudes above zero imply non-Gaussian signal in the original image."
+            image={WSTphase}  
             link="https://ui.adsabs.harvard.edu/abs/2023MNRAS.519.5288G/abstract"
           />
         </div>
@@ -109,12 +139,14 @@ import Project from "../../components/PaperSummary.astro";
             summary="Using the best upper-limits on the 21-cm signal from the LOFAR radio interferometer to interpret what this signal can \
                      tell us about the physics of reionisation. Achieved by performing Bayesian inference to search for models in excess (disfavoured) \
                      by the upper-limits."
+            image={LOFAR}  
             link="https://ui.adsabs.harvard.edu/abs/2021MNRAS.501....1G/abstract"
           />
           <Project
             title="Exploring reionization and high-z galaxy observables with recent multiredshift MWA upper limits on the 21-cm signal "
             summary="Using the best upper-limits on the 21-cm signal, but instead from the MWA radio interferometer. Perform the same analysis \
                      searching for disfavoured models but at a different period during the EoR."
+            image={MWA}  
             link="https://ui.adsabs.harvard.edu/abs/2021MNRAS.500.5322G/abstract"
           />
           <Project
@@ -122,6 +154,7 @@ import Project from "../../components/PaperSummary.astro";
             summary="We do not have actual observations of the 21-cm signal from neutral hydrogen, only upper limits. This project explored \
                      what other probes of the neutral hydrogen during the EoR can tell us about the astrophysical properties of the galaxies \
                      driving reionisation."
+            image={GCs}  
             link="https://ui.adsabs.harvard.edu/abs/2017MNRAS.465.4838G/abstract"
           />
           <Project
@@ -129,6 +162,7 @@ import Project from "../../components/PaperSummary.astro";
             summary="Using upper-limits on the 21-cm signal from the PAPER-64 radio interferometer to recover a minimum temperature for the \
                      neutral hydrogen during the EoR. Inferred a temperature in excess of 3 K, implying some level of heating of the neutral \
                      hydrogen due to ongoing reionisation."
+            image={PAPER}  
             link="https://ui.adsabs.harvard.edu/abs/2016MNRAS.455.4295G/abstract"
           />
         </div>
@@ -146,18 +180,21 @@ import Project from "../../components/PaperSummary.astro";
             title="21CMMC with a 3D light-cone: the impact of the co-evolution approximation on the astrophysics of reionization and cosmic dawn"
             summary="Further expanding the capabilities of 21CMMC to include 3D light-cones of the neutral hydrogen, enabling 21CMMC to \
                      better match the characteristics of observational data."
+            image={LC21CMMC}  
             link="https://ui.adsabs.harvard.edu/abs/2018MNRAS.477.3217G/abstract"
           />
           <Project
             title="Simultaneously constraining the astrophysics of reionization and the epoch of heating with 21CMMC"
             summary="Exanding 21CMMC to explore the full evolution of the 21-cm signal including the heating of the neutral hydrogen  \
                      due to X-rays emitted by the first galaxies."
+            image={Ts21CMMC}  
             link="https://ui.adsabs.harvard.edu/abs/2017MNRAS.472.2651G/abstract"
           />
           <Project
             title="21CMMC: an MCMC analysis tool enabling astrophysical parameter studies of the cosmic 21 cm signal"
             summary="The introductory publication of 21CMMC, showcasing for the first time the ability to perform 3D simulations of reionisation \
                      within a Bayesian inference pipeline."
+            image={e21CMMC}  
             link="https://ui.adsabs.harvard.edu/abs/2015MNRAS.449.4246G/abstract"
           />
         </div>
@@ -175,12 +212,14 @@ import Project from "../../components/PaperSummary.astro";
             title="Reionization and cosmic dawn astrophysics from the Square Kilometre Array: impact of observing strategies"
             summary="The Square Kilometre Array is set to revolutionise what we can learn about reionisation. This explores optimal survey designs \
                      to maximise the available information we can extract given a fixed amount of observing time."
+            image={SKA}  
             link="https://ui.adsabs.harvard.edu/abs/2020MNRAS.491.1398G/abstract"
           />
           <Project
             title="Optimal core baseline design and observing strategy for probing the astrophysics of reionization with the SKA"
             summary="The first phase of the Square Kilometre Array underwent descoping of the original design due to budget limitations. This project \
                      explored the consequences of these proposed changes to determine which minimised the impact of the actual intended science on the EoR."
+            image={SKAdes}  
             link="https://ui.adsabs.harvard.edu/abs/2015arXiv150903312G/abstract"
           />  
         </div>
@@ -199,6 +238,7 @@ import Project from "../../components/PaperSummary.astro";
             summary="Our inference pipelines make many simplifying assumptions which can bias what information we extract from an observation. Using \
                      simulation-based inference I explored how assuming a fixed functional form for the number density of galaxies can lead to significant biases and that \
                      these can be removed if we instead simultaneously fit a generalised functional form."
+            image={HMF}  
             link="https://ui.adsabs.harvard.edu/abs/2024arXiv240314061G/abstract"
           />
           <Project
@@ -206,6 +246,7 @@ import Project from "../../components/PaperSummary.astro";
              summary="To perform accurate end-to-end validation of radio interferometer data analysis pipelines, we require simulations \
                      in excess of the instrument field-of-view. This can be extremely computationally challenging. Using a simplified version \
                      of 21cmFAST I created a 8 Gpc wide simulation, more than 4 times larger than anything previously."
+            image={Vol}  
             link="https://ui.adsabs.harvard.edu/abs/2022MNRAS.516.5588G/abstract"                                                              
           />
           <Project
@@ -213,6 +254,7 @@ import Project from "../../components/PaperSummary.astro";
             summary="This is textbook chapter I wrote in 2019 summarising the current state-of-the-art in extracting astrophysical information about the \
                     EoR from observations. It explored various summary statistics of the signal and what unique insights each provided along with discussions \
                     on the various inference methodologies in use."
+            image={TB}  
             link="https://ui.adsabs.harvard.edu/abs/2019arXiv190913860G/abstract"
           />
         </div>
@@ -237,18 +279,21 @@ import Project from "../../components/PaperSummary.astro";
             title="Blind QSO reconstruction challenge: Exploring methods to reconstruct the Ly&alpha; emission line of QSOs"
             summary="A comparison of the performance of ten different Ly&alpha; reconstruction pipelines for the same unified set of QSOs. The study was \
                     performed blind to minimise confirmation bias. Provided both a qualitative and quantitative comparison."
+            image={blindQSO}  
             link="https://ui.adsabs.harvard.edu/abs/2024arXiv240401556G/abstract"
           />
           <Project
             title="IGM damping wing constraints on the tail end of reionization from the enlarged XQR-30 sample"
             summary="The most comprehensive analysis of high redshift QSOs to interpret constraints on the EoR. Using a carefully selected sample of 23 QSOs observed \
                     with X-Shooter as part of the XQR-30 campaign, constraints on the EoR were determined between 5.8 < z < 6.5." 
+            image={XQRhist}  
             link="https://ui.adsabs.harvard.edu/abs/2024MNRAS.530.3208G/abstract"
           />  
           <Project
             title="IGM damping wing constraints on reionization from covariance reconstruction of two z &GreaterEqual; 7 QSOs"
             summary="Obtained constraints on the EoR using two new observed z > 7 QSOs. Applied the updated reconstruction pipeline to recover constraints on the \
                      neutral fraction. Additionally, performed a comparison to existing constraints from a PCA based reconstruction pipeline."
+            image={z7QSOs}  
             link="https://ui.adsabs.harvard.edu/abs/2022MNRAS.512.5390G/abstract"
           />
           <Project
@@ -256,6 +301,7 @@ import Project from "../../components/PaperSummary.astro";
             summary="Extracting constraints on the EoR using the observed spectrum of the QSO with the record for the highest redshift at the time. Expanded \
                     the reconstruction pipeline to simultaneously reconstruct the N V emission line. Applied the same analysis pipeline to recover constraints on the \
                     neutral fraction."
+            image={J1342}  
             link="https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.5094G/abstract"   
           />
           <Project
@@ -263,12 +309,14 @@ import Project from "../../components/PaperSummary.astro";
             summary="The first measurement of on-going reionisation. Obtained by comparing the observed spectrum of the first ever z > 7 QSO to the predicted \
                      Ly&alpha; emission line from my Bayesian reconstruction pipeline. These are then compared against EoR simulations to determine how much neutral hydrogen \
                      is needed to explain the attenuation of the observed spectrum."
+            image={J1120}  
             link="https://ui.adsabs.harvard.edu/abs/2017MNRAS.466.4239G/abstract"
           />
           <Project
             title="Ly&alpha; emission-line reconstruction for high-z QSOs"
             summary="The introductory publication demonstrating the covariance based Bayesian reconstruction of the Ly&alpha; emission line profile of QSOs. Highlights \
                      the correlations between the Ly&alpha; line properties and other emission lines."
+            image={QSOcorr}
             link="https://ui.adsabs.harvard.edu/abs/2017MNRAS.466.1814G/abstract"
           />
         </div>
@@ -300,12 +348,14 @@ import Project from "../../components/PaperSummary.astro";
             title="The impact of temperature fluctuations on the large-scale clustering of the Ly&alpha; forest"
             summary="Helium, like hydrogen also undergoes reionisation, but this occurs much later, right when we want to use the Ly&alpha; forest for studying these BAOs. \
                     I modified my Ly&alpha; forest simulations to explore the impact of the heat injected into the neutral hydrogen due to Helium reionisation."
+            image={He}
             link="https://ui.adsabs.harvard.edu/abs/2015MNRAS.447.2503G/abstract"
           />
           <Project
             title="Fast, large-volume, GPU-enabled simulations for the Ly&alpha; forest: power spectrum forecasts for baryon acoustic oscillation experiments"
             summary="This was my first research project. I wrote simulations to use the computational power of Graphics Processing Units (GPUs) to produce \
                      large volumes of the Universe to statistically study the recovery of the BAOs from the Ly&alpha; forest."
+            image={BAOs}  
             link="https://ui.adsabs.harvard.edu/abs/2011MNRAS.418.1980G/abstract"   
           />
         </div>
@@ -334,6 +384,7 @@ import Project from "../../components/PaperSummary.astro";
             summary="By measuring the clustering strength of LAEs as a function of closed triangles on the sky (three point correlation function or \
                      bispectrum in Fourier space) we can break the degeneracies between cosmology and radiative transfer effects. This enables a more \
                      precise means to estimate dark energy from LAEs." 
+            image={LAEs}  
             link="https://ui.adsabs.harvard.edu/abs/2013MNRAS.431.1777G/abstract"
           />
         </div>

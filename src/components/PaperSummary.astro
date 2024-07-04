@@ -1,10 +1,26 @@
 ---
-const { title, summary, link = "#" } = Astro.props;
+import { Image } from 'astro:assets';
+const { title, summary, image, link = "#" } = Astro.props;
 ---
+
+<head>
+    <style>
+      .bordered-link {
+      display: inline-block; /* Ensures the element respects width and height properties */
+      padding: 8px 16px; /* Adjust padding as needed */
+      text-decoration: none; /* Remove default underline */
+      transition: border-color 0.3s ease; /* Smooth transition for border color */
+      text-align: center;
+      }
+    </style>
+  </head>
 
 <div class="max-w-sm mb-4 w-72 mx-0">
   <div class="p-1">
-    <h2 class="mb-2 text-md font-semibold tracking-tight">
+     <a href={link} target="_blank">
+        <Image class="" src={image} width=350 height=237 alt="" />
+    </a>
+    <h2 class="mb-2 text-md font-semibold tracking-tight text-center">
       {title}
     </h2>
     <a href={link} target="_blank" class="bordered-link">{summary}

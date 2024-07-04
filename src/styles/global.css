@@ -27,15 +27,6 @@ body {
   margin-bottom: 10px;
 }
 
-.bordered-link {
-      display: inline-block; /* Ensures the element respects width and height properties */
-      padding: 8px 16px; /* Adjust padding as needed */
-      border: 2px solid #007bff; /* Border style and color */
-      color: #007bff; /* Text color */
-      text-decoration: none; /* Remove default underline */
-      transition: border-color 0.3s ease; /* Smooth transition for border color */
-}
-
 .bordered-link:hover {
       border-color: #0056b3; /* Change border color on hover */
       color: #0056b3; /* Change text color on hover */
