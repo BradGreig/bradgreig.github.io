@@ -3,19 +3,64 @@ import Main from '../../layouts/Layout.astro';
 ---
 
 <Main title="Data Science">
-    <article class="m-20 md:px-20 flex flex-wrap items-center justify-center">
-        <h1 class="md:text-6xl text-5xl font-black mb-6">TOY DATA SCIENCE PROJECTS</h1>
-        <div class="content">
-            <p class="mb-6 text-lg">
-		On this page I'll summarise various toy data oriented projects that I have been messing around with.
+    <h1 class="md:text-6xl text-5xl font-black mb-6">TOY DATA SCIENCE PROJECTS</h1>
+    <div class="content">
+        <p class="mb-6 text-lg">
+            Every so often I will think of, or stumble upon, a small data-driven project 
+            that I find interesting to tackle given my background in research and 
+            data-analysis. Those that I deem interesting enough I will write up into 
+            small pages. On this page, I will provide a brief summary of these toy data 
+            science projects along with links to the full analysis.
+        </p>
+    </div>
+      
+    <div class:"mx-8">
+        <ul class="pl-5 text-center">
+            <li><a href="#Brownlow">1. Predicting the AFL Brownlow medal</a></li>
+            <li><a href="#LEGO">2. Extracting insights into the cost of LEGO</a></li>
+        </ul>
+    </div>
+    
+    <section id="Brownlow">
+        <h3 class="text-3xl font-black text-center mt-12 mb-6 w-full">
+            Using machine learning to predict the AFL Brownlow medal
+        </h3>
+        <div>
+            <p> 
+                The AFL Brownlow medal is awarded to the player at the end of the 
+                season with the most votes. These votes are awarded on a 3-2-1 basis 
+                by the officiating match day umpires. However, the outcome of these 
+                votes are a closely guarded secret until after the home and away season, 
+                when they are revealed at the end of season Brownlow medal ceremony. 
             </p>
             <p class="mb-6 text-lg">
-		First up, developing predictive models for determining the AFL Brownlow medal outcome. For more details, head <a
-href="https://bradgreig.github.io/brownlow-predictor/" target="_blank"
-                class="hover:underline font-bold">here</a>
-            </p>
-            <p class="mb-6 text-lg">
+                This project aims to build a machine learning model that predicts the 
+                3-2-1 votes based on the readily available player statistics on match day. 
+                It is trained on over 15 years of historical data. For more details, 
+                please head on over to the summary <a href="https://bradgreig.github.io/brownlow-predictor/" target="_blank"
+                class="hover:underline font-bold">page</a> of this project.
             </p>
         </div>
-    </article>
+    </section>
+
+    <section id="LEGO">
+        <h3 class="text-3xl font-black text-center mt-12 mb-6 w-full">
+            Analysis of the cost of LEGO sets over time
+        </h3>
+        <div>
+            <p> 
+                As a huge fan of LEGO, I was curious as to whether the cost of LEGO has 
+                gotten more expensive in recent times as is often perceived to be the case.
+                Further, I was also interested as to whether licensed LEGO themes such as 
+                Star Wars are more expensive than unlicensed themes. Finally, I also 
+                decided to look into whether the cost of LEGO in Australia was cheaper or 
+                more expensive than other major markets such as the US.
+            </p>
+            <p class="mb-6 text-lg">
+                With these questions in mind I performed some in-depth data-analysis. For this exploration I built a dataset based off 35 years of historical LEGO set information (from between 1990 and 2024). If you are interested, take a look at the project <a href="https://bradgreig.github.io/LEGO-analysis/" target="_blank"
+                class="hover:underline font-bold">page</a> on which I detail my exploration.
+            </p>
+        </div>
+    </section>
+    
 </Main>
